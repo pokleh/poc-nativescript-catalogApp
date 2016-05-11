@@ -6,16 +6,22 @@ import { ListView, ItemEventData } from "ui/list-view";
 
 import frameModule = require("ui/frame");
 
-var allCoinsViewModel = new ObservableArray();
+import { allCoinsViewModel } from "../../shared/full-catalog-view-model";
 
 export function onLoaded(args:EventData) {
     var page = <Page>args.object;
 
     //var coinList = <ListView>page.getViewById("coins-list");
     //coinList.items = allCoinsViewModel;
+    var goldCoins = new ObservableArray();
     
-    page.bindingContext = { "coins" : allCoinsViewModel };
+    for (var i = 0; i < allCoinsViewModel.length; i++) {
+        if (allCoinsViewModel.getItem(i)["category"] === "Gold") {
+            goldCoins.push(allCoinsViewModel.getItem(i));
+        }
+    }
     
+    page.bindingContext = { "coins" : goldCoins };
 }
 
 export function listViewItemTap(args: ItemEventData) {

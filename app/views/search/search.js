@@ -1,8 +1,8 @@
 "use strict";
 var observable_1 = require("data/observable");
 var viewModel = new observable_1.Observable({
-    newData: "2 Leva 1894",
-    data: "https://www.google.com/search?q=1+Lev+1881"
+    newData: "",
+    data: ""
 });
 function onLoaded(args) {
     var stack = args.object;

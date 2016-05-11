@@ -2,8 +2,8 @@ import { Observable, EventData } from "data/observable";
 import { StackLayout } from "ui/layouts/stack-layout";
 
 var viewModel = new Observable({
-    newData: "2 Leva 1894",
-    data: "https://www.google.com/search?q=1+Lev+1881"
+    newData: "",
+    data: ""
 });
 
 export function onLoaded(args: EventData) {

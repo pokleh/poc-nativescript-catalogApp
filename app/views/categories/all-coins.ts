@@ -1,27 +1,18 @@
 import { Observable, EventData } from "data/observable";
-import { ObservableArray } from "data/observable-array";
-import { CoinViewModel } from "../../shared/coin-view-model";
 import { Page } from "ui/page";
 import { ListView, ItemEventData } from "ui/list-view";
 
 import frameModule = require("ui/frame");
 
-var allCoinsViewModel = new ObservableArray();
+import { ObservableArray } from "data/observable-array";
+import { CoinViewModel } from "../../shared/coin-view-model";
 
-allCoinsViewModel.push(new CoinViewModel("2 Stotinki", "1881", 2.0, 18, "Copper", "https://www.sixbid.com/images/auction_images/1186/1096532m.jpg", 1500000));
-allCoinsViewModel.push(new CoinViewModel("5 Stotinki", "1881", 5.0, 23, "Copper", null, 5000000));
-allCoinsViewModel.push(new CoinViewModel("10 Stotinki", "1881", 10.0, 27, "Copper", "http://coinquest.com/cgi-data/cq_ro/response_380/bulgaria_10_stotinki_1881.jpg", 10000000));
-allCoinsViewModel.push(new CoinViewModel("2 Leva", "1882", 10.0, 24, "Silver", "http://www.coinfactswiki.com/w/images/thumb/c/ce/Bulgaria_H3035-30177r.jpg/300px-Bulgaria_H3035-30177r.jpg", 2500000));
-allCoinsViewModel.push(new CoinViewModel("50 Sotinki", "1883", 2.5, 18, "Silver", null, 2400000));
+import { allCoinsViewModel } from "../../shared/full-catalog-view-model";
 
 export function onLoaded(args:EventData) {
     var page = <Page>args.object;
 
-    //var coinList = <ListView>page.getViewById("coins-list");
-    //coinList.items = allCoinsViewModel;
-    
     page.bindingContext = { "coins" : allCoinsViewModel };
-    
 }
 
 export function listViewItemTap(args: ItemEventData) {

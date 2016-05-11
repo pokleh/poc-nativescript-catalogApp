@@ -3,9 +3,10 @@
     <SearchBar id="searchBar" hint="Search" text="" clear="onClear" submit="onSubmit" />
 </StackLayout>-->
 
-  <StackLayout loaded="onLoaded">
+  <StackLayout loaded="onLoaded" class="st-search">
     <Label text="Search for COINS" />
-    <Button text="GO" tap="onTap" />
-    <TextField text="{{ newData }}" hint="Enter Desired Coin" textWrap="false"/>
+    <TextField text="{{ newData }}" hint="Enter Desired Coin" textWrap="false" class="tf-search"/>
+    <Button text="GO" tap="onTap" class="btn-search"/>
+    
     <WebView url="{{ data }}" width="*" height="380"/>
   </StackLayout>

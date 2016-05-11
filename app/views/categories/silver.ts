@@ -6,10 +6,7 @@ import { ListView, ItemEventData } from "ui/list-view";
 
 import frameModule = require("ui/frame");
 
-var allCoinsViewModel = new ObservableArray();
-
-allCoinsViewModel.push(new CoinViewModel("2 Leva", "1882", 10.0, 24, "Silver", "http://www.coinfactswiki.com/w/images/thumb/c/ce/Bulgaria_H3035-30177r.jpg/300px-Bulgaria_H3035-30177r.jpg", 2500000));
-allCoinsViewModel.push(new CoinViewModel("50 Sotinki", "1883", 2.5, 18, "Silver", null, 2400000));
+import { allCoinsViewModel } from "../../shared/full-catalog-view-model";
 
 export function onLoaded(args:EventData) {
     var page = <Page>args.object;
@@ -17,7 +14,15 @@ export function onLoaded(args:EventData) {
     //var coinList = <ListView>page.getViewById("coins-list");
     //coinList.items = allCoinsViewModel;
     
-    page.bindingContext = { "coins" : allCoinsViewModel };
+    var silverCoins = new ObservableArray();
+    
+    for (var i = 0; i < allCoinsViewModel.length; i++) {
+        if (allCoinsViewModel.getItem(i)["category"] === "Silver") {
+            silverCoins.push(allCoinsViewModel.getItem(i));
+        }
+    }
+    
+    page.bindingContext = { "coins" : silverCoins };
     
 }
 
