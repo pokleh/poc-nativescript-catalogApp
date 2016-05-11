@@ -3,7 +3,7 @@
         <!--<NavigationButton text="Back" icon="" tap="" />-->
         <ActionBar title="Coins of Bulgaria 1878-1908" >
             <ActionBar.actionItems>
-                <ActionItem text="Go Back" tap="goBack" ios.position="left" />
+                <ActionItem icon="" text="Go Back" tap="goBack" ios.position="left" />
             </ActionBar.actionItems>
         </ActionBar>
     </Page.actionBar>
@@ -12,7 +12,7 @@
             <ListView.itemTemplate>
                 <StackLayout class="st-coin">
                     <Image src="{{ imageSource ? imageSource : '~/res/no-image.png' }}" width="320" height="200" />
-                    <Label text="{{ nominal + ' ' + year }}" textWrap="true" />
+                    <Label text="{{ nominal + ' ' + year }}" textWrap="true" class="lb-title"/>
                     <Label text="{{ category }}" textWrap="true" />
                     <Label text="{{ weight + 'g'}}" textWrap="true" />
                     <Label text="{{ diameter + 'mm'}}" textWrap="true" />

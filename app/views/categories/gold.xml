@@ -12,7 +12,7 @@
             <ListView.itemTemplate>
                 <StackLayout class="st-coin">
                     <Image src="{{ imageSource ? imageSource : '~/res/no-image.png' }}" width="320" height="200" />
-                    <Label text="{{ nominal + ' ' + year }}" textWrap="true" />
+                    <Label text="{{ nominal + ' ' + year }}" textWrap="true" class="lb-title"/>
                     <Label text="{{ category }}" textWrap="true" />
                     <Label text="{{ weight + 'g'}}" textWrap="true" />
                     <Label text="{{ diameter + 'mm'}}" textWrap="true" />
