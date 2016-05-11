@@ -1,0 +1,24 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+        <!--<NavigationButton text="Back" icon="" tap="" />-->
+        <ActionBar title="Coins of Bulgaria 1878-1908" >
+            <ActionBar.actionItems>
+                <ActionItem icon="" text="Go Back" tap="goBack" ios.position="left" />
+            </ActionBar.actionItems>
+        </ActionBar>
+    </Page.actionBar>
+    <!--<StackLayout>-->
+        <ListView items="{{ coins }}" itemTap="listViewItemTap" id="coins-list">
+            <ListView.itemTemplate>
+                <StackLayout class="st-coin">
+                    <Image src="{{ imageSource ? imageSource : '~/res/no-image.png' }}" width="320" height="200" />
+                    <Label text="{{ nominal + ' ' + year }}" textWrap="true" />
+                    <Label text="{{ category }}" textWrap="true" />
+                    <Label text="{{ weight + 'g'}}" textWrap="true" />
+                    <Label text="{{ diameter + 'mm'}}" textWrap="true" />
+                    <Label text="{{ mintage }}" textWrap="true" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    <!--</StackLayout>-->
+</Page>

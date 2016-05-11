@@ -1,0 +1,25 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      xmlns:catalogTab="views/catalog"
+      xmlns:collectionTab="views/collection"
+      xmlns:searchTab="views/search"
+      loaded="onLoaded">
+      <TabView>
+        <TabView.items>
+            <TabViewItem title="Catalog">
+                <TabViewItem.view>
+                    <catalogTab:catalog />
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem title="Collection">
+                <TabViewItem.view>
+                    <collectionTab:collection />
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem title="Search">
+                <TabViewItem.view>
+                     <searchTab:search />
+                </TabViewItem.view>
+            </TabViewItem>
+        </TabView.items>
+    </TabView> 
+</Page>

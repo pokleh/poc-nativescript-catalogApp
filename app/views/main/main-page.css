@@ -1,0 +1,51 @@
+.title {
+    font-size: 36;
+    font-weight: normal;
+    margin: 10;
+}
+
+.image {
+    horizontal-align: center;
+    margin: 10;
+}
+
+.st-catalog {
+    horizontal-align: center;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    color: lightslategray;
+    font-size: 20;
+    font-weight: normal;
+}
+
+.st-image {
+    background-color: white;
+    color: darkslategray;
+    margin: 20;
+}
+
+.btn-menu {
+    text-align: center;
+    color: darkslategray;   
+    background-color: lightgray;
+    border-width: 2;
+    border-color: darkslategray;
+    border-radius: 5;
+    margin: 10;
+    font-weight: normal;
+    font-size:18;   
+    text-transform: capitalize;
+}
+
+TabView {
+    font-weight: bold;
+    font-size:16;
+    text-transform: lowercase;
+}
+
+TabViewItem {
+    text-transform: lowercase;
+}

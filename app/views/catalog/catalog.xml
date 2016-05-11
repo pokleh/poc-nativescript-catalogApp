@@ -1,0 +1,12 @@
+<StackLayout class="st-catalog">
+    <StackLayout class="st-image">
+        <Image src="res://bulgaria_santim" class="image"/>
+    </StackLayout>
+    <Label text="Coins of Principality Bulgaria 1878-1908" textWrap="true" class="title"/>
+    <GridLayout rows="*, *" columns="*, *">
+        <Button text="Copper" tap="goToCopper" row="0" col="0" class="btn-menu" />
+        <Button text="Silver" tap="goToSilver" row="0" col="1" class="btn-menu" />
+        <Button text="Gold" tap="goToGold" row="1" col="0" class="btn-menu"  />
+        <Button text="All Coins" tap="goToAll" row="1" col="1" class="btn-menu" />
+    </GridLayout>
+</StackLayout>

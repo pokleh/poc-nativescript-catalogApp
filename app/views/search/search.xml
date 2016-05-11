@@ -1,0 +1,11 @@
+<!--<StackLayout>
+    <Label text="Search for Coins Online" textWrap="true" />
+    <SearchBar id="searchBar" hint="Search" text="" clear="onClear" submit="onSubmit" />
+</StackLayout>-->
+
+  <StackLayout loaded="onLoaded">
+    <Label text="Search for COINS" />
+    <Button text="GO" tap="onTap" />
+    <TextField text="{{ newData }}" hint="Enter Desired Coin" textWrap="false"/>
+    <WebView url="{{ data }}" width="*" height="380"/>
+  </StackLayout>

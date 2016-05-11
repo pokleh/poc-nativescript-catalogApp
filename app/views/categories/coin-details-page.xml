@@ -1,0 +1,22 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatedTo="pageNavigatedTo">
+    <StackLayout class="st-detail-coin">
+        <Image src="{{ imageSource ? imageSource : '~/res/no-image.png' }}" width="640" height="400" margin="10"/>
+        <Label text="{{ nominal + ' ' + year }}" textWrap="true" class="lb-detail-title"/>
+        <StackLayout orientation="horizontal" class="st-subdetail">
+            <Label text="Composition: " textWrap="true" /> 
+            <Label text="{{ category }}" textWrap="true" /> 
+        </StackLayout>
+        <StackLayout orientation="horizontal" class="st-subdetail">    
+            <Label text="Weight: " textWrap="true" />     
+            <Label text="{{ weight + 'g'}}" textWrap="true" />
+        </StackLayout>
+        <StackLayout orientation="horizontal" class="st-subdetail">
+            <Label text="Diameter: " textWrap="true" />  
+            <Label text="{{ diameter + 'mm'}}" textWrap="true" />
+        </StackLayout>
+        <StackLayout orientation="horizontal" class="st-subdetail">
+            <Label text="Mintage: " textWrap="true" />  
+            <Label text="{{ mintage }}" textWrap="true" />
+        </StackLayout>
+    </StackLayout>
+</Page>

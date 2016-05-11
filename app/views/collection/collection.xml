@@ -1,0 +1,5 @@
+<StackLayout>
+    <Label text="inside collection" textWrap="true" />
+    <Image src="res://bulgaria_santim" class="image"/>
+    <Label text="Coins of Principality Bulgaria 1878-1908" textWrap="true" class="title"/>
+</StackLayout>
