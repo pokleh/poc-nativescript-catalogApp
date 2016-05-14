@@ -1,12 +1,12 @@
-<!--<StackLayout>
-    <Label text="Search for Coins Online" textWrap="true" />
-    <SearchBar id="searchBar" hint="Search" text="" clear="onClear" submit="onSubmit" />
-</StackLayout>-->
+<StackLayout loaded="onLoaded" 
+             xmlns:Card="nativescript-cardview" >
+    <Card:CardView class="cardStyle" row="0" col="0" margin="10" elevation="20" radius="5" id="btn-copper" >
+        <StackLayout class="st-search">
+            <Label text="Search for COINS" />
+            <TextField text="{{ newData }}" hint="Enter Desired Coin" textWrap="false" class="tf-search"/>
+            <Button text="GO" tap="onTap" class="btn-search"/>
 
-  <StackLayout loaded="onLoaded" class="st-search">
-    <Label text="Search for COINS" />
-    <TextField text="{{ newData }}" hint="Enter Desired Coin" textWrap="false" class="tf-search"/>
-    <Button text="GO" tap="onTap" class="btn-search"/>
-    
-    <WebView url="{{ data }}" width="*" height="380"/>
-  </StackLayout>
+            <WebView url="{{ data }}" width="*" height="380"/>
+        </StackLayout>
+    </Card:CardView>
+</StackLayout>

@@ -1,5 +1,6 @@
 .st-detail-coin {
     text-align: center;
+    padding: 10;
 }
 
 .lb-detail-title {
@@ -9,4 +10,8 @@
 .st-subdetail {
     horizontal-align:center;
     font-size:20;
+}
+
+.cardStyle {
+    background-color: white;
 }

@@ -2,24 +2,27 @@
       xmlns:catalogTab="views/catalog"
       xmlns:collectionTab="views/collection"
       xmlns:searchTab="views/search"
+      xmlns:Card="nativescript-cardview" 
       loaded="onLoaded">
-      <TabView>
-        <TabView.items>
-            <TabViewItem title="Catalog">
-                <TabViewItem.view>
-                    <catalogTab:catalog />
-                </TabViewItem.view>
-            </TabViewItem>
-            <TabViewItem title="Collection">
-                <TabViewItem.view>
-                    <collectionTab:collection />
-                </TabViewItem.view>
-            </TabViewItem>
-            <TabViewItem title="Search">
-                <TabViewItem.view>
-                     <searchTab:search />
-                </TabViewItem.view>
-            </TabViewItem>
-        </TabView.items>
-    </TabView> 
+      <Card:CardView class="cardStyle" row="0" col="0" margin="10" elevation="20" radius="5" id="btn-copper" >
+        <TabView>
+            <TabView.items>
+                <TabViewItem title="Catalog">
+                    <TabViewItem.view>
+                        <catalogTab:catalog />
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="Collection">
+                    <TabViewItem.view>
+                        <collectionTab:collection />
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="Search">
+                    <TabViewItem.view>
+                        <searchTab:search />
+                    </TabViewItem.view>
+                </TabViewItem>
+            </TabView.items>
+        </TabView> 
+    </Card:CardView>
 </Page>

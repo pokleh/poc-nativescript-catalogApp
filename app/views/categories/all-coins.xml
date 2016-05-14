@@ -1,4 +1,7 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd"     
+      xmlns:Card="nativescript-cardview"  
+      loaded="onLoaded" 
+      navigatedTo="onNavigatedTo">
     <Page.actionBar>
         <!--<NavigationButton text="Back" icon="" tap="" />-->
         <ActionBar title="Coins of Bulgaria 1878-1908" >
@@ -10,14 +13,16 @@
     <!--<StackLayout>-->
         <ListView items="{{ coins }}" itemTap="listViewItemTap" id="coins-list">
             <ListView.itemTemplate>
-                <StackLayout class="st-coin">
-                    <Image src="{{ imageSource ? imageSource : '~/res/no-image.png' }}" width="320" height="200" />
-                    <Label text="{{ nominal + ' ' + year }}" textWrap="true" class="lb-title"/>
-                    <Label text="{{ category }}" textWrap="true" />
-                    <Label text="{{ weight + 'g'}}" textWrap="true" />
-                    <Label text="{{ diameter + 'mm'}}" textWrap="true" />
-                    <Label text="{{ mintage }}" textWrap="true" />
-                </StackLayout>
+                <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+                    <StackLayout class="st-coin">
+                        <Image src="{{ imageSource ? imageSource : '~/res/no-image.png' }}" width="320" height="200" />
+                        <Label text="{{ nominal + ' ' + year }}" textWrap="true" class="lb-title"/>
+                        <Label text="{{ category }}" textWrap="true" />
+                        <Label text="{{ weight + 'g'}}" textWrap="true" />
+                        <Label text="{{ diameter + 'mm'}}" textWrap="true" />
+                        <Label text="{{ mintage }}" textWrap="true" />
+                    </StackLayout>
+                </Card:CardView>
             </ListView.itemTemplate>
         </ListView>
     <!--</StackLayout>-->
