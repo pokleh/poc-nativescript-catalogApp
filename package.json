@@ -13,6 +13,7 @@
 		}
 	},
 	"dependencies": {
+		"nativescript-cardview": "^1.1.7",
 		"tns-core-modules": "2.0.0"
 	},
 	"devDependencies": {

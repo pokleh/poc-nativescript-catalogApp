@@ -1,7 +1,5 @@
 .st-coin {
-    border-width: 1;
-    border-color: black;
-    margin:10;
+
     padding: 10;
     font-size: 18;
 }
@@ -13,4 +11,8 @@ Label {
 .lb-title {
     font-weight: bold;
     font-size: 18;
+}
+
+.cardStyle {
+    background-color: white;
 }

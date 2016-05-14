@@ -1,8 +1,5 @@
 .st-search {
     text-align: center;
-    border-width: 1;
-    border-color: black;
-    border-radius: 5;
     padding: 10;
 }
 
@@ -19,4 +16,10 @@
 .tf-search {
     padding: 10;
     font-size:30;
+}
+
+.cardStyle {
+    background-color: white;
+    padding: 0;
+    text-transform: capitalize;
 }

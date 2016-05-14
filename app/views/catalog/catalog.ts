@@ -9,6 +9,8 @@ var silverButton;
 var goldButton;
 var copperButton;
 
+var isGoldButtonTriggered;
+
 export function onLoaded(args:EventData) {
     stack = <StackLayout>args.object;
     
@@ -16,13 +18,40 @@ export function onLoaded(args:EventData) {
     goldButton = stack.getViewById("btn-gold");
     allButton = stack.getViewById("btn-all");
     copperButton = stack.getViewById("btn-copper");
+    
+    resetAllAnimations();
+}
+
+function resetAllAnimations() {
+    silverButton.opacity = 1;
+    silverButton.scaleX = 1;
+    silverButton.scaleY = 1;
+    
+    goldButton.opacity = 1;
+    goldButton.scaleX = 1;
+    goldButton.scaleY = 1;
+    
+    console.log("isGOldTriggered : " + isGoldButtonTriggered);
+    if (isGoldButtonTriggered) {
+        goldButton.translateX = 0
+        goldButton.translateY = 0;
+    }
+    
+    allButton.opacity = 1;
+    allButton.scaleX = 1;
+    allButton.scaleY = 1;
+    
+    copperButton.opacity = 1;
+    copperButton.scaleX = 1;
+    copperButton.scaleY = 1;
 }
 
 export function goToCopper(args:EventData) {
     
     copperButton.animate({
-        rotate: 360,
-        duration: 500
+        scale: {x : 3, y: 3},
+        opacity: 0,
+        duration: 300
     }).then(function () {    
         frameModule.topmost().navigate({
             moduleName: "views/categories/copper",
@@ -38,9 +67,11 @@ export function goToCopper(args:EventData) {
 }
 
 export function goToSilver(args:EventData) {
+    
+    silverButton.rotate = 0;
     silverButton.animate({
         rotate: 360,
-        duration: 500
+        duration: 300
     }).then(function () {    
         frameModule.topmost().navigate({
             moduleName: "views/categories/silver",
@@ -55,9 +86,26 @@ export function goToSilver(args:EventData) {
 }
 
 export function goToGold(args:EventData) {
+    isGoldButtonTriggered = true;
+    
+    silverButton.animate({
+        opacity: 0,
+        duration: 300
+    });
+    copperButton.animate({
+        opacity: 0,
+        duration: 300
+    })
+    allButton.animate({
+        opacity: 0,
+        duration: 300
+    })
+    
     goldButton.animate({
-        rotate: 360,
-        duration: 500
+        scale: {x : 2.2, y: 2.2 },
+        translate: {x : 100, y : -100},
+        opacity:0.5,
+        duration: 300
     }).then(function () {    
         frameModule.topmost().navigate({
             moduleName: "views/categories/gold",
@@ -72,9 +120,10 @@ export function goToGold(args:EventData) {
 }
 
 export function goToAll(args:EventData) {
+    allButton.rotate = 0;
     allButton.animate({
-        rotate: 360,
-        duration: 500
+        rotate: 720,
+        duration: 300
     }).then(function () {    
         frameModule.topmost().navigate({
             moduleName: "views/categories/all-coins",
