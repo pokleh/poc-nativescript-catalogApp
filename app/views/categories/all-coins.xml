@@ -11,7 +11,7 @@
         </ActionBar>
     </Page.actionBar>
     <!--<StackLayout>-->
-        <ListView items="{{ coins }}" itemTap="listViewItemTap" id="coins-list">
+        <ListView items="{{ coins }}" itemTap="listViewItemTap" id="coins-list" separatorColor="red" >
             <ListView.itemTemplate>
                 <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
                     <StackLayout class="st-coin">

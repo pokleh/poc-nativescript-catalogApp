@@ -35,20 +35,30 @@ function resetAllAnimations() {
     copperButton.scaleY = 1;
 }
 function goToCopper(args) {
-    copperButton.animate({
-        scale: { x: 3, y: 3 },
-        opacity: 0,
-        duration: 300
-    }).then(function () {
-        frameModule.topmost().navigate({
-            moduleName: "views/categories/copper",
-            animated: true,
-            transition: {
-                name: "slide",
-                duration: 300,
-                curve: "easeIn"
-            }
-        });
+    // copperButton.animate({
+    //     scale: {x : 3, y: 3},
+    //     opacity: 0,
+    //     duration: 300
+    // }).then(function () {    
+    //     frameModule.topmost().navigate({
+    //         moduleName: "views/categories/copper",
+    //         animated: true,
+    //         transition: {
+    //             name: "slide",
+    //             duration: 300,
+    //             curve: "easeIn"
+    //         }
+    //     });
+    // })
+    // this button uses  CSS-animation (in main-page.css)
+    frameModule.topmost().navigate({
+        moduleName: "views/categories/copper",
+        animated: true,
+        transition: {
+            name: "slide",
+            duration: 300,
+            curve: "easeIn"
+        }
     });
 }
 exports.goToCopper = goToCopper;

@@ -40,6 +40,20 @@ Page {
     text-transform: capitalize;
 }
 
+/* use of pseudo-selector highlighted (for button only!) - 
+will have to use setTimeOut if you need the animation to run before button event */
+.btn-menu:highlighted {
+    animation-name: highlight;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+/* css animation */
+@keyframes highlight {
+    from { background-color: white; }
+    to { background-color: red; }
+}
+
 TabView {
     font-weight: bold;
     font-size:14;
